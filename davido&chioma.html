@@ -552,9 +552,8 @@ $("#go").click(function () {
         }
     }, 50);
 });
-    </script>
-    <!--script type="text/javascript">
-$("#confirm").click(function () {
+    
+    $("#confirm").click(function () {
     if ($("#name").val().length < 4)
     {
         $(".error").fadeIn(500);
@@ -573,6 +572,14 @@ $("#confirm").click(function () {
                     i = 50;
                 }, 1000);
             } 
+            $(document).click(function () {
+    if ($("#name").is(":focus")) {
+        $(".error").fadeOut(500);
+    }
+});
+            </script>
+    
+    <!--script type="text/javascript">
             if (i >= 100) {
                 clearInterval(interval);
                 $("#load").fadeOut(0);
