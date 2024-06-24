@@ -531,8 +531,6 @@ $(".liked").click(function () {
 </script>
 
 
-
-
 <script type="text/javascript">
 
 $("#go").click(function () {
@@ -560,7 +558,7 @@ $("#go").click(function () {
         var i = 0;
        
         var interval = setInterval(function () {
-            i += 1;
+            i += 2;
             $("#percentage").text(i - "%");
             $("#fill").css("width", i + "%");
             if (i == 50) {
