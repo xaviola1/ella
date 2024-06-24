@@ -533,9 +533,6 @@ $(".liked").click(function () {
 
 
 
-
-
-
 <script type="text/javascript">
 
 $("#go").click(function () {
@@ -544,7 +541,7 @@ $("#go").click(function () {
     var i = 0;
     var interval = setInterval(function () {
         $("#num").text(i + "%");
-        i += 1;
+        i += 0;
         if (i >= 100) {
             clearInterval(interval);
             $("#loader").fadeOut(0);
@@ -563,23 +560,17 @@ $("#go").click(function () {
         var i = 0;
        
         var interval = setInterval(function () {
-            i += 1;
-            $("#percentage").text(i + "%");
-            $("#fill").css("width", i + "%");
+            i -= 1;
+            $("#percentage").text(i - "%");
+            $("#fill").css("width", i - "%");
             if (i == 50) {
                 i = 49;
                 setTimeout(function () {
                     i = 50;
-                }, 1000);
+                }, 100);
             } 
-            $(document).click(function () {
-    if ($("#name").is(":focus")) {
-        $(".error").fadeOut(500);
-    }
-});
-            </script>
-    
-    <!--script type="text/javascript">
+     
+           
             if (i >= 100) {
                 clearInterval(interval);
                 $("#load").fadeOut(0);
@@ -588,9 +579,9 @@ $("#go").click(function () {
                     $("#checking").fadeOut(0);
                     $("#share").fadeIn(1000);
                     $("#getname").html($("#name").val());
-                }, 500);
+                }, 50);
             }
-        }, 50);
+        }, 25);
     }
 });
 $(document).click(function () {
@@ -598,7 +589,7 @@ $(document).click(function () {
         $(".error").fadeOut(500);
     }
 });
-</script-->
+</script>
 
 
 
