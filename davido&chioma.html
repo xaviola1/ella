@@ -541,7 +541,7 @@ $("#go").click(function () {
     var i = 0;
     var interval = setInterval(function () {
         $("#num").text(i + "%");
-        i += 0;
+        i += 10;
         if (i >= 100) {
             clearInterval(interval);
             $("#loader").fadeOut(0);
@@ -560,9 +560,9 @@ $("#go").click(function () {
         var i = 0;
        
         var interval = setInterval(function () {
-            i -= 1;
+            i += 1;
             $("#percentage").text(i - "%");
-            $("#fill").css("width", i - "%");
+            $("#fill").css("width", i + "%");
             if (i == 50) {
                 i = 49;
                 setTimeout(function () {
@@ -579,9 +579,9 @@ $("#go").click(function () {
                     $("#checking").fadeOut(0);
                     $("#share").fadeIn(1000);
                     $("#getname").html($("#name").val());
-                }, 50);
+                }, 100);
             }
-        }, 25);
+        }, 50);
     }
 });
 $(document).click(function () {
