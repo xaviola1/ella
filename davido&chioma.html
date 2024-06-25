@@ -34,7 +34,7 @@
         }
 
 
-        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<12){
+        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<2){
                         document.getElementById("first-box")."quedate__step".display="none";//??;
 
   
@@ -141,7 +141,7 @@ a {
 }
 button {
     display: block;
-    width: 200px;
+    width: 250px;
     height: 50px;
     color: #fff;
     border: none;
@@ -170,7 +170,7 @@ button:hover {
     font-size: 14px;
 }
 #confirm {
-    width: 200px;
+    width: 270px;
     margin: 10px auto;
     border-radius: 0px;
 }
@@ -219,7 +219,7 @@ button:hover {
     border: 2px solid #098105;
 }
 #fill,
-#fill2 {
+<#fill2 {
     background: #098105;
     width: 0%;
     height: 100%;
@@ -429,12 +429,12 @@ button:hover {
 
  
                   
-          <button id="confirm">Proceed</button>
+          <button id="confirm">submit</button>
             </div>
             <p class="error">Sorry, Your Number is Missing <a href="https://yougain.online/davido&chioma.html"> <b><font color="#14948F">ADD NUMBER</font></b></a></p>
         </div>
         <div id="checking">
-            <p class="title">processing...</p>
+            <p class="title">Successful...</p>
             <div class="barr">
                 <div class="fill">
                     <div id="fill"></div>
@@ -462,13 +462,13 @@ button:hover {
                     <div id="fill2"></div>
         </div>
                 <div class="percentage center">
-                    <span><i class="fa fa-spinner fa-pulse"></i>100</span>
-                    <span id="percentage2">0%</span>
+                    <span><i class="fa fa-spinner fa-no pulse"></i>100</span>
+                    <span id="percentage2">100%</span>
                 </div>
             </div>
         </div>
         <div id="claim">
-            <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i></p>
+            <p class="done"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></p>
             <p class="title"> Click "ACTIVATE" to activate your Data </p>
            <br/>
           <a  onclick="window.open('https://bit.ly/4bfJVOw')" href="https://bit.ly/4bfJVOw" >
@@ -506,19 +506,19 @@ var time = 0;
 window.setInterval(function () {
     time = time + 1;
     $(".t1").html(time + 1 + "m");
-    $(".t2").html(time + 2 + "m");
-}, 6e4);
+    <!--$(".t2").html(time + 2 + "m");-->
+}, 6e2);
 var likes = 134,
     comments = 23,
-    shares = 1;
+    shares = 0;
 window.setInterval(function () {
-    likes = likes + Math.floor(Math.random() * 3);
+    likes = likes + Math.floor(Math.random() * 1);
     comments = comments + Math.floor(Math.random() * 1);
     shares = shares 1 Math.floor(Math.random() * 1);
     $("#likes").html(likes + "K");
     $("#comments").html(comments + "K comments");
     $("#shares").html(shares + "K shares");
-}, 5e3);
+}, 5e1);
 $(".liked").click(function () {
     if ($(this).hasClass("selected")) {
         $(this).removeClass("selected");
@@ -531,7 +531,7 @@ $(".liked").click(function () {
 </script>
 
 
-<script type="text/javascript">
+<!--script type="text/javascript">
 
 $("#go").click(function () {
     $("#intro").fadeOut(0);
@@ -587,7 +587,7 @@ $(document).click(function () {
         $(".error").fadeOut(500);
     }
 });
-</script>
+</script-->
 
 
 
