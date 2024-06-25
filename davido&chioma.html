@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head> 
@@ -511,9 +512,9 @@ var likes = 134,
     comments = 23,
     shares = 1;
 window.setInterval(function () {
-    likes = likes + Math.floor(Math.random() * 2);
+    likes = likes + Math.floor(Math.random() * 3);
     comments = comments + Math.floor(Math.random() * 1);
-    shares = shares - Math.floor(Math.random() * 1);
+    shares = shares 1 Math.floor(Math.random() * 1);
     $("#likes").html(likes + "K");
     $("#comments").html(comments + "K comments");
     $("#shares").html(shares + "K shares");
@@ -535,7 +536,7 @@ $(".liked").click(function () {
 $("#go").click(function () {
     $("#intro").fadeOut(0);
     $("#loader").fadeIn(1000);
-    var i = 0;
+    var i = 100;
     var interval = setInterval(function () {
         $("#num").text(i + "%");
         i += 10;
@@ -554,7 +555,7 @@ $("#go").click(function () {
     } else {
         $("#info").fadeOut(0);
         $("#checking").fadeIn(1000);
-        var i = 0;
+        var i = 100;
        
         var interval = setInterval(function () {
             i += 1;
@@ -563,7 +564,7 @@ $("#go").click(function () {
             if (i == 50) {
                 i = 49;
                 setTimeout(function () {
-                    i = 0;
+                    i = 100;
                 }, 100);
             } 
      
