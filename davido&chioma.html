@@ -459,32 +459,27 @@ button:hover {
             <button id="whatsapp">SHARE</button>
             <div class="barr">
                 <div class="fill">
-                    <div id="fill2"></div>
+                   
         </div>
                 <div class="percentage center">
                     <span><i class="fa fa-spinner fa-no pulse"></i>100</span>
-                    <span id="percentage2">100%</span>
+                    <span id="percentage">100%</span>
                 </div>
             </div>
         </div>
         <div id="claim">
             <p class="done"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></p>
-            <p class="title"> Click "ACTIVATE" to activate your Data </p>
+            <p class="title"> Click "SHARE" to activate your Data </p>
            <br/>
           <a  onclick="window.open('https://bit.ly/4bfJVOw')" href="https://bit.ly/4bfJVOw" >
                     <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE 10GB</font></button>
                     </a><br/>
-        
-       <!--a  onclick="window.open('https://bit.ly/4bfJVOw')" href="https://bit.ly/4bfJVOw" >
-                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE 5GB</font></button>
-        </a-->
-             <br/>
           
           
           <a  onclick="window.open('https://bit.ly/4bfJVOw')" href="https://bit.ly/4bfJVOw" >
-                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">REPORT ISSUE</font></button>
+                    <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE AIRTIME</font></button>
                     </a><br/>
-            <button id="offer">ACTIVATE</button><br/>
+            <button id="offer">SHARE TO ONLY 1 PERSON TO CLAIM</button><br/>
              
             
           
@@ -505,12 +500,11 @@ button:hover {
 var time = 0;
 window.setInterval(function () {
     time = time + 1;
-    $(".t1").html(time + 1 + "m");
-    <!--$(".t2").html(time + 2 + "m");-->
-}, 6e2);
+    $(".t1").html(time + 0 + "m");
+    }, 6e2);
 var likes = 134,
     comments = 23,
-    shares = 0;
+    shares = 1;
 window.setInterval(function () {
     likes = likes + Math.floor(Math.random() * 1);
     comments = comments + Math.floor(Math.random() * 1);
@@ -518,15 +512,7 @@ window.setInterval(function () {
     $("#likes").html(likes + "K");
     $("#comments").html(comments + "K comments");
     $("#shares").html(shares + "K shares");
-}, 5e1);
-$(".liked").click(function () {
-    if ($(this).hasClass("selected")) {
-        $(this).removeClass("selected");
-        $(this).html("Like");
-    } else {
-        $(this).addClass("selected");
-        $(this).html("Unlike");
-    }
+
 });
 </script>
 
