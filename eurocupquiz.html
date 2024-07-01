@@ -1,28 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Euro Cup Quiz</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Euro Cup 2024 Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .question { margin-bottom: 20px; }
+        .result { display: none; }
+    </style>
+    <script>
+        function checkAnswers() {
+            const answers = ['Germany', 'Italy', 'Cristiano Ronaldo', '24', 'London', 'Hugo Lloris', 'Germany'];
+            let score = 0;
+
+            answers.forEach((answer, index) => {
+                const userAnswer = document.querySelector(`input[name="q${index+1}"]:checked`);
+                if (userAnswer && userAnswer.value === answer) {
+                    score++;
+                }
+            });
+
+            document.getElementById('result').innerHTML = `You scored ${score} out of 7!`;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        function share(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Check out my Euro Cup 2024 Quiz score!");
+
+            let shareUrl = '';
+
+            if (platform === 'facebook') {
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            } else if (platform === 'twitter') {
+                shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+            } else if (platform === 'whatsapp') {
+                shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+            }
+
+            window.open(shareUrl, '_blank');
+        }
+    </script>
 </head>
 <body>
-    <div id="quiz-container">
-        <div id="quiz">
-            <h1>Euro Cup Quiz</h1>
-            <div id="question-container">
-                <p id="question"></p>
-                <div id="options"></div>
-            </div>
-            <button id="next-btn">Next</button>
-        </div>
-        <div id="result" style="display: none;">
-            <h2>Your Score: <span id="score"></span></h2>
-            <p>Share your score:</p>
-            <input type="text" id="share-link" readonly>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+<h1>Euro Cup 2024 Quiz</h1>
+
+<div class="question">
+    <p>1. Where is the Euro Cup 2024 being held?</p>
+    <input type="radio" name="q1" value="Spain"> Spain<br>
+    <input type="radio" name="q1" value="France"> France<br>
+    <input type="radio" name="q1" value="Germany"> Germany<br>
+    <input type="radio" name="q1" value="Italy"> Italy<br>
+</div>
+
+<div class="question">
+    <p>2. Which team won the Euro Cup 2020?</p>
+    <input type="radio" name="q2" value="England"> England<br>
+    <input type="radio" name="q2" value="Italy"> Italy<br>
+    <input type="radio" name="q2" value="Portugal"> Portugal<br>
+    <input type="radio" name="q2" value="Belgium"> Belgium<br>
+</div>
+
+<div class="question">
+    <p>3. Who is the top scorer in Euro Cup history?</p>
+    <input type="radio" name="q3" value="Thierry Henry"> Thierry Henry<br>
+    <input type="radio" name="q3" value="Cristiano Ronaldo"> Cristiano Ronaldo<br>
+    <input type="radio" name="q3" value="Michel Platini"> Michel Platini<br>
+    <input type="radio" name="q3" value="Alan Shearer"> Alan Shearer<br>
+</div>
+
+<div class="question">
+    <p>4. How many teams are participating in Euro Cup 2024?</p>
+    <input type="radio" name="q4" value="20"> 20<br>
+    <input type="radio" name="q4" value="22"> 22<br>
+    <input type="radio" name="q4" value="24"> 24<br>
+    <input type="radio" name="q4" value="26"> 26<br>
+</div>
+
+<div class="question">
+    <p>5. Which city will host the Euro 2024 final?</p>
+    <input type="radio" name="q5" value="Berlin"> Berlin<br>
+    <input type="radio" name="q5" value="Munich"> Munich<br>
+    <input type="radio" name="q5" value="London"> London<br>
+    <input type="radio" name="q5" value="Rome"> Rome<br>
+</div>
+
+<div class="question">
+    <p>6. Who is the current captain of the French national team?</p>
+    <input type="radio" name="q6" value="Hugo Lloris"> Hugo Lloris<br>
+    <input type="radio" name="q6" value="Antoine Griezmann"> Antoine Griezmann<br>
+    <input type="radio" name="q6" value="Kylian Mbappé"> Kylian Mbappé<br>
+    <input type="radio" name="q6" value="Paul Pogba"> Paul Pogba<br>
+</div>
+
+<div class="question">
+    <p>7. Which team has won the most Euro Cup titles?</p>
+    <input type="radio" name="q7" value="Germany"> Germany<br>
+    <input type="radio" name="q7" value="Spain"> Spain<br>
+    <input type="radio" name="q7" value="Italy"> Italy<br>
+    <input type="radio" name="q7" value="France"> France<br>
+</div>
+
+<button onclick="checkAnswers()">Submit</button>
+
+<div id="result" class="result"></div>
+
+<h2>Share Your Score!</h2>
+<button onclick="share('facebook')">Share on Facebook</button>
+<button onclick="share('twitter')">Share on Twitter</button>
+<button onclick="share('whatsapp')">Share on WhatsApp</button>
+
 </body>
 </html>
