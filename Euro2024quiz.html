@@ -30,7 +30,7 @@
 
     </script>
 <!-- New script -->	    
-  <script>
+   <script>
         function checkAnswers() {
             const answers = ['Germany', 'Italy', 'Cristiano Ronaldo', '24', 'London', 'Hugo Lloris', 'Germany'];
             let score = 0;
@@ -42,19 +42,13 @@
                 }
             });
 
-            let resultMessage = `You scored ${score} out of 7! `;
-            const averageScore = Math.ceil(answers.length / 2);  // Average score is half the total questions, rounded up
-
-            if (score < averageScore) {
-                resultMessage += "You have not passed the average score, try again.";
-            } else {
-                resultMessage += "Great job! You passed the average score.";
-            }
-
-            document.getElementById('result').innerHTML = resultMessage;
+            document.getElementById('result').innerHTML = `You scored ${score} out of 7!`;
             document.getElementById('result').style.display = 'block';
         }
 
+        function share(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Check out my Euro Cup 2024 Quiz score!");
 
             let shareUrl = '';
 
@@ -69,6 +63,7 @@
             window.open(shareUrl, '_blank');
         }
     </script>
+	   <!-- END of NEW SCRIPT > 
          <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EURO CUP 2024 QUIZ</title>
@@ -413,7 +408,7 @@ button:hover {
             </div>
         </div>
 	<!-- NEW CODE -->
-	    <div class="question">
+	  <div class="question">
     <p>1. Where is the Euro Cup 2024 being held?</p>
     <input type="radio" name="q1" value="Spain"> Spain<br>
     <input type="radio" name="q1" value="France"> France<br>
@@ -472,6 +467,11 @@ button:hover {
 <button onclick="checkAnswers()">Submit</button>
 
 <div id="result" class="result"></div>
+
+<h2>Share Your Score!</h2>
+<button onclick="share('facebook')">Share on Facebook</button>
+<button onclick="share('twitter')">Share on Twitter</button>
+<button onclick="share('whatsapp')">Share on WhatsApp</button>
 
 	    <!-- END OF NEW CODE -->
 
